@@ -18,7 +18,7 @@ sleep 10
 ##############################setting#####################################
 
 var=`expr $var + 1`;num=`expr $num + 1`;
-yum install wget net-tools vim bc -y 
+yum install wget net-tools vim bc bash-completion -y 
 if [ "$?" = "0" ];then 
 echo -e "${blue}${num} _ [ 安裝必要插件 ]${white} ${green}安裝成功${white}" | tee -a log.txt
 else 
