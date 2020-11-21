@@ -26,7 +26,7 @@ echo -e "${blue}${num} _ [ 安裝必要插件 ]${white} ${red}安裝失敗${whit
 fi
 
 var=`expr $var + 1`;num=`expr $num + 1`;
-echo $1.$2 master | tee -a a.txt ;echo $1.`echo "$2+1" | bc` node1 | tee -a a.txt ;echo $1.`echo "$2+2" | bc` node2 | tee -a a.txt
+echo $1.$2 master | tee -a /etc/hosts ;echo $1.`echo "$2+1" | bc` node1 | tee -a /etc/hosts ;echo $1.`echo "$2+2" | bc` node2 | tee -a /etc/hosts
 if [ "$?" = "0" ];then 
 echo -e "${blue}${num} _ [ 設定主機名稱 ]${white} ${green}設定成功${white}" | tee -a log.txt
 else 
