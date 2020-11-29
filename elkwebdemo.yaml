@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: elkwebdemo
+spec:
+  replicas: 1
+  template:
+    metadata:
+     labels:
+       name: elkwebdemo
+    spec:
+     containers:
+     - name: elkwebdemo
+       image: bolingcavalry/elkdemo:0.0.1-SNAPSHOT
+       tty: true
+       ports:
+       - containerPort: 8080
