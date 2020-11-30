@@ -39,6 +39,9 @@ https://www.parallels.com/hk/products/desktop/
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/10.png)
 
-**系統規格架構圖**
+**1.先用git 來下載所需檔案**
+```
+git clone https://github.com/880831ian/kubernetes-elk.git
+```
 
-![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/13.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/16.png)
