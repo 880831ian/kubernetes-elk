@@ -97,8 +97,40 @@ kubectl get nodes
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
 
-**5. 等待約1至兩分鐘，查詢主機叢集狀況**
+**5. 等待約一至兩分鐘，查詢主機叢集狀況**
 ```
 kubectl get nodes
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
+
+# 初始化設定
+
+**1. 安裝 Dashboard(master)**
+```
+cd /tmp && wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta3/aio/deploy/recommended.yaml
+mv recommended.yaml kubernetes-dashboard_v2.0.0-beta3.yaml
+vim kubernetes-dashboard_v2.0.0-beta3.yaml
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
+
+**2. 設定 Dashboard**
+```
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    k8s-app: kubernetes-dashboard
+  name: kubernetes-dashboard
+  namespace:kube-system
+  namespace:kubernetes-dashboard
+
+spec:
+  type: NodePort
+  ports:
+    - port: 443
+      targetPort: 8443
+      nodePort: 32222
+  selector:
+    k8s-app: kubernetes-dashboard
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/24.png)
