@@ -132,3 +132,16 @@ spec:
     k8s-app: kubernetes-dashboard
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/25.png)
+
+**3. 安裝 Dashboard**
+```
+vim admin-sa.yaml
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/26.png)
+
+**4. 匯入兩個檔案**
+```
+kubectl apply -f kubernetes-dashboard_v2.0.0-beta3.yaml
+kubectl apply -f admin-sa.yaml
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/27.png)
