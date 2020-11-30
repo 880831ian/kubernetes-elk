@@ -155,3 +155,18 @@ kubectl get secret `kubectl get secret -n kubernetes-dashboard | grep admin-toke
 **6. 瀏覽器輸入https://IP:32222 (記得要使用https !!! 備註：google chrome會有安全性的問題不能訪問，解決方式：確定在該網頁，鍵盤輸入thisisunsafe，就可以進入)**
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/29.png)
+
+**7. 登入後即可看到dashboard主畫面**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/30.png)
+
+**8. 到kubernetes-dashboard設定，調整認證timeout時間**
+```
+- '--token-ttl=43200'
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/31.png)
+
+**9. 會看到他自動重新佈署顯示黃燈，部屬完成後顯示綠燈**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/32.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/33.png)
