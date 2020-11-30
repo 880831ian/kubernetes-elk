@@ -101,12 +101,6 @@ kubectl get nodes
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
 
-**5. 等待約一至兩分鐘，查詢主機叢集狀況**
-```
-kubectl get nodes
-```
-![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
-
 # 初始化設定
 
 **1. 安裝 Dashboard(master)**
@@ -115,7 +109,7 @@ cd /tmp && wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-be
 mv recommended.yaml kubernetes-dashboard_v2.0.0-beta3.yaml
 vim kubernetes-dashboard_v2.0.0-beta3.yaml
 ```
-![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/24.png)
 
 **2. 設定 Dashboard**
 ```
@@ -137,4 +131,4 @@ spec:
   selector:
     k8s-app: kubernetes-dashboard
 ```
-![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/24.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/25.png)
