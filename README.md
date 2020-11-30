@@ -64,6 +64,6 @@ cat log.txt
 
 **1. 初始化設定**
 ```
-cat log.txt
+kubeadm init --apiserver-advertise-address=10.211.55.37 --pod-network-cidr=10.244.0.0/16 --service-cidr=10.96.0.0/12 --kubernetes-version=v1.15.2 --cri-socket="/var/run/dockershim.sock"
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/19.png)
