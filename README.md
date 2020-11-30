@@ -145,3 +145,9 @@ kubectl apply -f kubernetes-dashboard_v2.0.0-beta3.yaml
 kubectl apply -f admin-sa.yaml
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/27.png)
+
+**5. 取得dashboard管理者登入密鑰，並匯出password.txt**
+```
+kubectl get secret `kubectl get secret -n kubernetes-dashboard | grep admin-token | awk '{print $1}'` -o jsonpath={.data.token} -n kubernetes-dashboard | base64 -d >> password.txt
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/28.png)
