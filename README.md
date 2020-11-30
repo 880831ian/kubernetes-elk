@@ -3,10 +3,10 @@
 **說明：代補充**
 
 **以下目錄**
-######安裝虛擬機
+* 安裝虛擬機
 * 安裝k8s
-  * Item 2a
-  * Item 2b
+  * 執行腳本(3台虛擬機)
+  * 初始化設定(master)
 
 # 安裝虛擬機
 **系統規格架構圖**
@@ -52,5 +52,18 @@ git clone https://github.com/880831ian/kubernetes-elk.git
 ```
 sh k8s.sh 10.211.55 37
 ```
-
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/16.png)
+
+**3. 執行完畢檢查一下Log檔案**
+```
+cat log.txt
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/18.png)
+
+# 初始化設定
+
+**1. 初始化設定**
+```
+cat log.txt
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/19.png)
