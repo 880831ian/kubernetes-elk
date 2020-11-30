@@ -8,5 +8,5 @@
   * Item 2a
   * Item 2b
 
-#安裝虛擬機
+# 安裝虛擬機
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/1.png)
