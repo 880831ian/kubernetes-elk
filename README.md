@@ -9,8 +9,8 @@
   * Item 2b
 
 # 安裝虛擬機
-
+設備於Mac OS上，使用Parallels Desktop建立3台虛擬機。
 ```
-hi
+https://www.parallels.com/hk/products/desktop/
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/1.png)
