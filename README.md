@@ -19,7 +19,14 @@ https://www.parallels.com/hk/products/desktop/
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/2.png)
 
-**系統配置每一台CPU為2 core Ram為 2G Memory 32GB**
+**系統配置每一台CPU為2、core、Ram為2G、Memory 32GB**
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/5.png)
 
+**選擇中文>繁體中文(台灣)**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/6.png)
+
+**記得開啟網路連線，並修改hostname**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/5.png)
