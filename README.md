@@ -171,3 +171,30 @@ kubectl get secret `kubectl get secret -n kubernetes-dashboard | grep admin-toke
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/32.png)
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/33.png)
+
+# 資源監控安裝
+
+**1. 安裝 metrics-server(master)**
+```
+git clone https://github.com/kubernetes-incubator/metrics-server.git
+cd metrics-server/deploy/kubernetes
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/35.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/36.png)
+
+**2. 修改 metrics-server**
+```
+vim metrics-server-deployment.yam
+
+      - name: metrics-server
+        image: k8s.gcr.io/metrics-server-amd64:v0.3.3
+        imagePullPolicy: IfNotPresent
+        command:
+            - /metrics-server
+            - --kubelet-preferred-address-types=InternalIP
+            - --kubelet-insecure-tls
+        volumeMounts:
+        - name: tmp-dir
+          mountPath: /tmp 
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/37.png)
