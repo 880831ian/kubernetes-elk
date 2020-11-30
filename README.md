@@ -6,7 +6,7 @@
 
 **感謝各方大神資料，才可以完成該專題**
 * K8s安裝及設定 https://blog.tomy168.com/2019/08/centos-76-kubernetes.html
-
+* elk安裝及設定 https://blog.tomy168.com/2019/08/centos-76-kubernetes.html
 
 **以下目錄**
 * 安裝虛擬機
@@ -15,6 +15,9 @@
   * 初始化設定(master)
   * 安裝 Dashboard(master)
   * 資源監控安裝
+* 安裝docker-compose
+* 安裝docker-elk
+* 實作成果
 
 # 安裝虛擬機
 **系統規格架構圖**
