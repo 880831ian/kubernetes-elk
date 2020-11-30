@@ -73,6 +73,15 @@ cat log.txt
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/18.png)
 
+**4. !!!注意!!! Elasticsearch版本5後，無法正常啟動，請查詢vm.max_map_count，可以使用sysctl -w查寫入，若要永久可在/etc/sysctl.conf加入**
+```
+sysctl vm.max_map_count
+sysctl -w vm.max_map_count=262144
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/41.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/40.png)
+
+
 # 初始化設定
 
 **1. 初始化設定 (master)**
