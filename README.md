@@ -6,7 +6,8 @@
 
 **感謝各方大神資料，才可以完成該專題**
 * K8s安裝及設定 https://blog.tomy168.com/2019/08/centos-76-kubernetes.html
-* elk安裝及設定 https://blog.tomy168.com/2019/08/centos-76-kubernetes.html
+* elk安裝及設定 https://surprised128.medium.com/use-elk-to-monitor-docker-container-b2d5903920e2
+* elk-docker 系統文件 https://elk-docker.readthedocs.io/#disabling-ssl-tls
 
 **以下目錄**
 * 安裝虛擬機
