@@ -180,7 +180,6 @@ git clone https://github.com/kubernetes-incubator/metrics-server.git
 cd metrics-server/deploy/kubernetes
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/35.png)
-![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/36.png)
 
 **2. 修改 metrics-server**
 ```
@@ -197,4 +196,16 @@ vim metrics-server-deployment.yam
         - name: tmp-dir
           mountPath: /tmp 
 ```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/36.png)
+
+
+**3. 匯入metrics-server**
+```
+kubectl apply -f .
+```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/37.png)
+
+**4. 顯示圖表示資訊**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/38.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/39.png)
