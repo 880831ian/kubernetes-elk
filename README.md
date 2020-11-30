@@ -9,6 +9,7 @@
 * 安裝k8s
   * 執行腳本(3台虛擬機)
   * 初始化設定(master)
+  * 安裝 Dashboard(master)
 
 # 安裝虛擬機
 **系統規格架構圖**
@@ -64,7 +65,7 @@ cat log.txt
 
 # 初始化設定
 
-**1. 初始化設定**
+**1. 初始化設定 (master)**
 ```
 kubeadm init --apiserver-advertise-address=10.211.55.37 --pod-network-cidr=10.244.0.0/16 --service-cidr=10.96.0.0/12 --kubernetes-version=v1.15.2 --cri-socket="/var/run/dockershim.sock"
 ```
@@ -89,3 +90,15 @@ kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documen
 kubeadm join 10.211.55.37:6443 --token gny70m.2v41qsd2t3jllxk --discovery-token-ca-cert-hash sha256:f25d9d5d03fe993976daa053f23c546fa946cb6faa92c82c5c1946806aa57932
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/22.png)
+
+**5. 等待約1至兩分鐘，查詢主機叢集狀況**
+```
+kubectl get nodes
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
+
+**5. 等待約1至兩分鐘，查詢主機叢集狀況**
+```
+kubectl get nodes
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/23.png)
