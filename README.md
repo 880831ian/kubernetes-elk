@@ -111,7 +111,7 @@ vim kubernetes-dashboard_v2.0.0-beta3.yaml
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/24.png)
 
-**2. 設定 Dashboard**
+**2. 設定 Dashboard 以32222 port為例**
 ```
 kind: Service
 apiVersion: v1
@@ -151,3 +151,7 @@ kubectl apply -f admin-sa.yaml
 kubectl get secret `kubectl get secret -n kubernetes-dashboard | grep admin-token | awk '{print $1}'` -o jsonpath={.data.token} -n kubernetes-dashboard | base64 -d >> password.txt
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/28.png)
+
+**6. 瀏覽器輸入https://IP:32222 (記得要使用https !!! 備註：google chrome會有安全性的問題不能訪問，解決方式：確定在該網頁，鍵盤輸入thisisunsafe，就可以進入)**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/29.png)
