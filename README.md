@@ -151,6 +151,34 @@ spec:
 **3. 安裝 Dashboard**
 ```sh
 vim admin-sa.yaml
+
+kind: ClusterRoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: admin
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+subjects:
+- kind: ServiceAccount
+  name: admin
+  namespace: kube-system
+  namespace: kubernetes-dashboard
+
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin
+  namespace: kube-system
+  namespace: kubernetes-dashboard
+
+  labels:
+    kubernetes.io/cluster-service: "true"
+    addonmanager.kubernetes.io/mode: Reconcile
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/26.png)
 
