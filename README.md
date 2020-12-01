@@ -218,8 +218,21 @@ kubectl get secret `kubectl get secret -n kubernetes-dashboard | grep admin-toke
 
 **1. 安裝 metrics-server(master)**
 ```sh
-git clone https://github.com/kubernetes-incubator/metrics-server.git
-cd metrics-server/deploy/kubernetes
+wget https://github.com/kubernetes-sigs/metrics-server/archive/v0.3.6.tar.gz
+tar -zxvf v0.3.6.tar.gz
+cd metrics-server-0.3.6/deploy/1.8+/
+
+      - name: metrics-server
+        image: k8s.gcr.io/metrics-server-amd64:v0.3.3
+        imagePullPolicy: IfNotPresent
+        command:
+            - /metrics-server
+            - --kubelet-preferred-address-types=InternalIP
+            - --kubelet-insecure-tls
+        volumeMounts:
+        - name: tmp-dir
+          mountPath: /tmp
+
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/35.png)
 
