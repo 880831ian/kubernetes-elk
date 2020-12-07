@@ -341,6 +341,37 @@ kubectl create -f kibana.yaml -n logging
 ```sh
 kubectl get pods -n logging
 kubectl get service -n logging
+curl $(ip):30526
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/54.png)
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/55.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/56.png)
+
+# 設定fluentd-rbac.yaml
+
+**1. 檢查fluentd-rbac.yaml**
+```sh
+cat fluentd-rbac.yaml
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/58.png)
+
+**2. 匯入fluentd-rbac.yaml到logging**
+```sh
+kubectl create -f fluentd-rbac.yaml -n logging
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/59.png)
+
+
+# 設定fluentd-daemonset.yaml
+
+**1. 檢查fluentd-daemonset.yaml**
+```sh
+cat fluentd-daemonset.yaml
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/60.png)
+
+**2. 匯入fluentd-daemonset.yaml到logging**
+```sh
+kubectl create -f fluentd-daemonset.yaml -n logging
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/61.png)
