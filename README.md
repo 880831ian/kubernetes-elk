@@ -284,3 +284,4 @@ minikube start --momory 8192 --cpus 4
 kubectl create namespace logging
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/45.png)
+
