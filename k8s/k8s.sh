@@ -96,15 +96,6 @@ else
 echo -e "${blue}${num} _ [ 安裝docker-ce;k8s 服務 ]${white} ${red}安裝失敗${white}" | tee -a log.txt
 fi
 
-var=`expr $var + 1`;num=`expr $num + 1`;
-curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
-chmod 700 get_helm.sh
-./get_helm.sh
-if [ "$?" = "0" ];then 
-echo -e "${blue}${num} _ [ 安裝helm ]${white} ${green}安裝成功${white}" | tee -a log.txt
-else 
-echo -e "${blue}${num} _ [ 安裝helm ]${white} ${red}安裝失敗${white}" | tee -a log.txt
-fi
 
 endtime=`date +'%Y-%m-%d %H:%M:%S'`
 start_seconds=$(date --date="$starttime" +%s);
