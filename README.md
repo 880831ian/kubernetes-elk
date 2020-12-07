@@ -361,7 +361,6 @@ kubectl create -f fluentd-rbac.yaml
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/59.png)
 
-
 # 設定fluentd-daemonset.yaml
 
 **1. 檢查fluentd-daemonset.yaml**
@@ -383,3 +382,26 @@ kubectl get pods -n kube-system --watch | greep fluentd
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/62.png)
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/63.png)
+
+# 實作成果
+
+**1. 建立一個nginx網頁服務並查詢是否建立成功**
+```sh
+kubectl create deployment nginx --image=nginx
+kubectl create service nodeport nginx --tcp=80:80
+kubectl get pods
+kubectl get svc
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/64.png)
+
+**2. 檢查網頁服務是否正常**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/65.png)
+
+**3. 用K8s查看nginx部屬狀況**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/66.png)
+
+**4. 用K8s將nginx部屬規模調整成3個**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/67.png)
