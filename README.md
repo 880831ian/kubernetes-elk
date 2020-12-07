@@ -410,7 +410,7 @@ kubectl get svc
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/68.png)
 
-**5. 建立index pattern (logstash*-)**
+**5. 建立index pattern (logstash)**
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/69.png)
 
