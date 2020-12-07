@@ -265,3 +265,22 @@ curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest
 sudo rpm -ivh minikube-latest.x86_64.rpm
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/42.png)
+
+**2. 啟動minikube**
+```sh
+minikube start
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/43.png)
+
+**3. minikube加入記憶體及處理器數量**
+```sh
+kubectl create namespace logging
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/45.png)
+
+
+**4. 創建一個新命名空間**
+```sh
+minikube start --momory 8192 --cpus 4
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/44.png)
