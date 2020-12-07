@@ -42,7 +42,7 @@ https://www.parallels.com/hk/products/desktop/
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/2.png)
 
-**3. 系統配置每一台CPU為2、core、Ram為2G、Memory 32GB**
+**3. 系統配置每一台CPU為2core、Ram為2G、Memory 32GB**
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/5.png)
 
