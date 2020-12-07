@@ -422,3 +422,28 @@ kubectl get svc
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/71.png)
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/72.png)
+
+**8. 模擬服務中斷**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/73.png)
+
+**9. 發現nginx網頁服務仍然正常，且k8s的nginx服務重新部署**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/74.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/75.png)
+
+**10. 部屬完成**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/76.png)
+
+**11. ELK Log分析 nginx帶入錯誤資訊**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/77.png)
+
+**12. 顯示錯誤訊息**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/78.png)
+
+**13. 即可在ELK Log上面找到資訊**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/79.png)
