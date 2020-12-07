@@ -357,7 +357,7 @@ cat fluentd-rbac.yaml
 
 **2. 匯入fluentd-rbac.yaml到logging**
 ```sh
-kubectl create -f fluentd-rbac.yaml -n logging
+kubectl create -f fluentd-rbac.yaml
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/59.png)
 
@@ -372,6 +372,14 @@ cat fluentd-daemonset.yaml
 
 **2. 匯入fluentd-daemonset.yaml到logging**
 ```sh
-kubectl create -f fluentd-daemonset.yaml -n logging
+kubectl create -f fluentd-daemonset.yaml
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/61.png)
+
+**3. 用K8s查看fluentd部屬狀況**
+
+```sh
+kubectl get pods -n kube-system --watch | greep fluentd
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/62.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/63.png)
