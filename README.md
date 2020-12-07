@@ -285,3 +285,32 @@ kubectl create namespace logging
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/45.png)
 
+
+# 設定elastic.yaml
+
+**1. 安裝Elasticsearch docker image**
+```sh
+docker pull docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/46.png)
+
+**2. 檢查elastic.yaml**
+```sh
+cat elastic.yaml
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/47.png)
+
+**3. 匯入elastic.yaml到logging**
+```sh
+kubectl create -f elastic.yaml -n logging
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/48.png)
+
+**4. 用K8s查看elasticsearch部屬狀況**
+
+```sh
+kubectl get pods -n logging
+kubectl get service -n logging
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/49.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/50.png)
