@@ -17,8 +17,12 @@
   * 初始化設定(master)
   * 安裝 Dashboard(master)
   * 資源監控安裝
-* 安裝docker-compose
-* 安裝docker-elk
+* 安裝ELK
+  * 安裝minikube
+  * 設定elastic.yaml
+  * 設定kibana.yaml 
+  * 設定fluentd-rbac.yaml
+  * 設定fluentd-daemonset.yaml
 * 實作成果
 
 # 安裝虛擬機
