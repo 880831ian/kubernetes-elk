@@ -311,6 +311,36 @@ kubectl create -f elastic.yaml -n logging
 ```sh
 kubectl get pods -n logging
 kubectl get service -n logging
+curl $(ip):31985
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/49.png)
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/50.png)
+
+# 設定kibana.yaml
+
+**1. 安裝kibana docker image**
+```sh
+docker pull docker.elastic.co/kibana/kibana:7.10.0
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/51.png)
+
+**2. 檢查kibana.yaml**
+```sh
+cat kibana.yaml
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/52.png)
+
+**3. 匯入kibana.yaml到logging**
+```sh
+kubectl create -f kibana.yaml -n logging
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/53.png)
+
+**4. 用K8s查看kibana部屬狀況**
+
+```sh
+kubectl get pods -n logging
+kubectl get service -n logging
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/54.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/55.png)
