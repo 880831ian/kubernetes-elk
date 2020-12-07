@@ -256,3 +256,12 @@ kubectl apply -f .
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/38.png)
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/39.png)
+
+# 安裝minikube
+
+**1. 下載minikube rpm檔案**
+```sh
+curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-latest.x86_64.rpm
+sudo rpm -ivh minikube-latest.x86_64.rpm
+```
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/42.png)
