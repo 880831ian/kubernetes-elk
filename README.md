@@ -274,13 +274,13 @@ minikube start
 
 **3. minikube加入記憶體及處理器數量**
 ```sh
-kubectl create namespace logging
+minikube start --momory 8192 --cpus 4
 ```
-![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/45.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/44.png)
 
 
 **4. 創建一個新命名空間**
 ```sh
-minikube start --momory 8192 --cpus 4
+kubectl create namespace logging
 ```
-![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/44.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/45.png)
