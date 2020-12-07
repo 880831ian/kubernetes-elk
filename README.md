@@ -405,3 +405,20 @@ kubectl get svc
 **4. 用K8s將nginx部屬規模調整成3個**
 
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/67.png)
+
+**4. 進入kibana網頁**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/68.png)
+
+**5. 建立index pattern (logstash*-)**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/69.png)
+
+**6. 選擇@timestamp**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/70.png)
+
+**7. 瀏覽log及fields**
+
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/71.png)
+![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/72.png)
