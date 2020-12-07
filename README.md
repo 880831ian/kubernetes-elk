@@ -9,6 +9,8 @@
 * elk教學 https://surprised128.medium.com/use-elk-to-monitor-docker-container-b2d5903920e2
 * elk安裝及設定 https://github.com/deviantony/docker-elk.git
 * elk-docker 系統文件 https://elk-docker.readthedocs.io/#disabling-ssl-tls
+* minikube https://minikube.sigs.k8s.io/docs/start/
+* elasticsearch-Kibana-fluentd https://mherman.org/blog/logging-in-kubernetes-with-elasticsearch-Kibana-fluentd/
 
 **以下目錄**
 * 安裝虛擬機
