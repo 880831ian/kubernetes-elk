@@ -126,9 +126,7 @@ kubectl get nodes
 
 **1. 安裝 Dashboard(master)**
 ```sh
-cd /tmp && wget https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta3/aio/deploy/recommended.yaml
-mv recommended.yaml kubernetes-dashboard_v2.0.0-beta3.yaml
-vim kubernetes-dashboard_v2.0.0-beta3.yaml
+wget https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/24.png)
 
@@ -159,7 +157,7 @@ spec:
 vim admin-sa.yaml
 
 kind: ClusterRoleBinding
-apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: rbac.authorization.k8s.io/v1beta1
 metadata:
   name: admin
   annotations:
@@ -172,16 +170,12 @@ subjects:
 - kind: ServiceAccount
   name: admin
   namespace: kube-system
-  namespace: kubernetes-dashboard
-
 ---
 apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: admin
   namespace: kube-system
-  namespace: kubernetes-dashboard
-
   labels:
     kubernetes.io/cluster-service: "true"
     addonmanager.kubernetes.io/mode: Reconcile
@@ -190,14 +184,14 @@ metadata:
 
 **4. 匯入兩個檔案**
 ```sh
-kubectl apply -f kubernetes-dashboard_v2.0.0-beta3.yaml
+kubectl create -f kubernetes-dashboard.yaml
 kubectl apply -f admin-sa.yaml
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/27.png)
 
 **5. 取得dashboard管理者登入密鑰，並匯出password.txt**
 ```sh
-kubectl get secret `kubectl get secret -n kubernetes-dashboard | grep admin-token | awk '{print $1}'` -o jsonpath={.data.token} -n kubernetes-dashboard | base64 -d >> password.txt
+kubectl -n kube-system describe secret `kubectl -n kube-system get secret|grep admin-token|cut -d " " -f1`|grep "token:"|tr -s " "|cut -d " " -f2 >> passwd.txt
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/28.png)
 
