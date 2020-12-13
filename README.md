@@ -270,7 +270,7 @@ minikube start
 
 **3. minikube加入記憶體及處理器數量**
 ```sh
-minikube start --momory 8192 --cpus 4
+minikube start --memory 8192 --cpus 4
 ```
 ![image](https://github.com/880831ian/kubernetes-elk/blob/main/images/44.png)
 
