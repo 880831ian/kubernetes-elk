@@ -226,7 +226,7 @@ cd metrics-server-0.3.6/deploy/1.8+/
 
 **2. 修改 metrics-server**
 ```sh
-vim metrics-server-deployment.yam
+vim metrics-server-deployment.yaml
 
       - name: metrics-server
         image: k8s.gcr.io/metrics-server-amd64:v0.3.3
