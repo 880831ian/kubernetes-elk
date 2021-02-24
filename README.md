@@ -6,10 +6,15 @@
 
 **感謝各方大神資料，才可以完成該專題**
 > K8s安裝及設定 https://blog.tomy168.com/2019/08/centos-76-kubernetes.html
+> 
 > elk教學 https://surprised128.medium.com/use-elk-to-monitor-docker-container-b2d5903920e2
+> 
 > elk安裝及設定 https://raw.githubusercontent.com/deviantony/docker-elk.git
+> 
 > elk-docker 系統文件 https://elk-docker.readthedocs.io/#disabling-ssl-tls
+> 
 > minikube https://minikube.sigs.k8s.io/docs/start/
+> 
 > elasticsearch-Kibana-fluentd https://mherman.org/blog/logging-in-kubernetes-with-elasticsearch-Kibana-fluentd/
 
 **以下目錄**
